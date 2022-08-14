@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 
-img = cv2.imread('sekiller.jpg')
+img = cv2.imread('test2.jpg')
 grayImg= cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 lower = np.array([110, 110, 110])
@@ -13,7 +13,7 @@ threshed = cv2.inRange(img, lower, upper)
 cv2.imshow('Thresholded Image', threshed)
 
 canny=cv2.Canny(threshed,100,200)
-
+cv2.imshow('canny Image', canny)
 
 contours , hierarchy = cv2.findContours(canny, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
