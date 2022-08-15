@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 
 #resmi belirtilen konumdan okuduk
-img = cv2.imread('test2.jpg')
+img = cv2.imread('sekiller.jpg')
 #resim algılama işleminde kolaylık sağlaması için resmi gri yaptık
 grayImg= cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
